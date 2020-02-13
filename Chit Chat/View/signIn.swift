@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+import Firebase
 class signIn: UIViewController {
-
+    @IBOutlet weak var loginemail: UITextField!
+    @IBOutlet weak var loginpass: UITextField!
+    
+    @IBOutlet weak var logInround: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        logInround.layer.cornerRadius = 6
     }
     
 
@@ -27,4 +31,20 @@ class signIn: UIViewController {
     }
     */
 
+    @IBAction func logInpressed(_ sender: Any) {
+        Auth.auth().signIn(withEmail: loginemail.text!, password: loginpass.text!) { (user, error) in
+            
+            if error != nil{
+                let alert = UIAlertController(title: "Error", message: "Invalid email or password", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "toChat", sender: self)
+            }
+        }
+    }
+    
 }
