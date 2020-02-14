@@ -11,6 +11,9 @@
 		4436C42243FB32F879ACD156 /* Pods_Chit_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B63CF02D566C3D91AEE7D6 /* Pods_Chit_Chat.framework */; };
 		64CCA46DA908719E48B502A5 /* Pods_Chit_Chat_Chit_ChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FF690DAE9E0F772C666D2 /* Pods_Chit_Chat_Chit_ChatUITests.framework */; };
 		762EDE6D23F5B04200EA3C09 /* chatview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EDE6C23F5B04200EA3C09 /* chatview.swift */; };
+		762EDE7523F70DC100EA3C09 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EDE7323F70DC100EA3C09 /* TableViewCell.swift */; };
+		762EDE7623F70DC100EA3C09 /* messageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762EDE7423F70DC100EA3C09 /* messageCell.xib */; };
+		762EDE7B23F7397800EA3C09 /* message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762EDE7A23F7397800EA3C09 /* message.swift */; };
 		7664DAFC23F4669300718953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7664DAFB23F4669300718953 /* AppDelegate.swift */; };
 		7664DAFE23F4669300718953 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7664DAFD23F4669300718953 /* SceneDelegate.swift */; };
 		7664DB0023F4669300718953 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7664DAFF23F4669300718953 /* ViewController.swift */; };
@@ -47,6 +50,9 @@
 		5D768403C50E421668348CB6 /* Pods-Chit Chat-Chit ChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chit Chat-Chit ChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-Chit Chat-Chit ChatUITests/Pods-Chit Chat-Chit ChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		734FF690DAE9E0F772C666D2 /* Pods_Chit_Chat_Chit_ChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chit_Chat_Chit_ChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		762EDE6C23F5B04200EA3C09 /* chatview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatview.swift; sourceTree = "<group>"; };
+		762EDE7323F70DC100EA3C09 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		762EDE7423F70DC100EA3C09 /* messageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageCell.xib; sourceTree = "<group>"; };
+		762EDE7A23F7397800EA3C09 /* message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = message.swift; sourceTree = "<group>"; };
 		7664DAF823F4669300718953 /* Chit Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chit Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7664DAFB23F4669300718953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7664DAFD23F4669300718953 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		762EDE6E23F70CBF00EA3C09 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				762EDE7323F70DC100EA3C09 /* TableViewCell.swift */,
+				762EDE7423F70DC100EA3C09 /* messageCell.xib */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		762EDE7723F7393200EA3C09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				762EDE7A23F7397800EA3C09 /* message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7664DAEF23F4669200718953 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +170,8 @@
 		7664DAFA23F4669300718953 /* Chit Chat */ = {
 			isa = PBXGroup;
 			children = (
+				762EDE7723F7393200EA3C09 /* Model */,
+				762EDE6E23F70CBF00EA3C09 /* Custom Cell */,
 				7664DB2E23F46F8300718953 /* Controller */,
 				7664DB2D23F46F1000718953 /* View */,
 				7664DB0423F4669600718953 /* Assets.xcassets */,
@@ -306,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7664DB0823F4669700718953 /* LaunchScreen.storyboard in Resources */,
+				762EDE7623F70DC100EA3C09 /* messageCell.xib in Resources */,
 				7664DB2C23F4672A00718953 /* GoogleService-Info.plist in Resources */,
 				7664DB0523F4669600718953 /* Assets.xcassets in Resources */,
 				7664DB0323F4669300718953 /* Main.storyboard in Resources */,
@@ -441,6 +467,8 @@
 				762EDE6D23F5B04200EA3C09 /* chatview.swift in Sources */,
 				7664DAFC23F4669300718953 /* AppDelegate.swift in Sources */,
 				7664DB3223F48D6700718953 /* signIn.swift in Sources */,
+				762EDE7B23F7397800EA3C09 /* message.swift in Sources */,
+				762EDE7523F70DC100EA3C09 /* TableViewCell.swift in Sources */,
 				7664DAFE23F4669300718953 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

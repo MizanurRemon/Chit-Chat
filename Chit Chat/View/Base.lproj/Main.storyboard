@@ -209,33 +209,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-1S-k2U">
                                 <rect key="frame" x="0.0" y="543" width="375" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDA-hi-hww">
-                                        <rect key="frame" x="293" y="10" width="74" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDA-hi-hww">
+                                        <rect key="frame" x="293" y="16" width="74" height="39"/>
                                         <color key="backgroundColor" red="1" green="0.88688811460000005" blue="0.031591851439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="Send"/>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yfj-0e-cuG">
-                                        <rect key="frame" x="5" y="6" width="278" height="66"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="278" id="Ftg-J9-p67"/>
-                                            <constraint firstAttribute="height" constant="66" id="Uk7-zo-vno"/>
-                                        </constraints>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drZ-qb-DGD">
+                                        <rect key="frame" x="8" y="19" width="277" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jDA-hi-hww" secondAttribute="trailing" constant="8" id="9k6-YB-aZe"/>
-                                    <constraint firstItem="Yfj-0e-cuG" firstAttribute="top" secondItem="Bek-1S-k2U" secondAttribute="top" constant="6" id="E0m-BY-M1l"/>
-                                    <constraint firstAttribute="bottom" secondItem="Yfj-0e-cuG" secondAttribute="bottom" constant="8" id="I5K-3F-4y1"/>
+                                    <constraint firstAttribute="height" constant="80" id="Mh7-Ev-YNz"/>
                                     <constraint firstItem="jDA-hi-hww" firstAttribute="top" secondItem="Bek-1S-k2U" secondAttribute="top" constant="10" id="PtU-qe-G7p"/>
-                                    <constraint firstItem="jDA-hi-hww" firstAttribute="leading" secondItem="Yfj-0e-cuG" secondAttribute="trailing" constant="10" id="qVJ-fb-uHV"/>
-                                    <constraint firstAttribute="bottom" secondItem="jDA-hi-hww" secondAttribute="bottom" constant="10" id="t1e-4T-Iz2"/>
-                                    <constraint firstItem="Yfj-0e-cuG" firstAttribute="leading" secondItem="Bek-1S-k2U" secondAttribute="leading" constant="5" id="x4V-yu-BUg"/>
+                                    <constraint firstItem="drZ-qb-DGD" firstAttribute="leading" secondItem="Bek-1S-k2U" secondAttribute="leading" constant="8" id="Su1-c9-X2K"/>
+                                    <constraint firstItem="jDA-hi-hww" firstAttribute="leading" secondItem="drZ-qb-DGD" secondAttribute="trailing" constant="8" id="ZLf-N0-mkg"/>
+                                    <constraint firstAttribute="width" constant="375" id="e4l-U2-GNX"/>
+                                    <constraint firstItem="drZ-qb-DGD" firstAttribute="top" secondItem="Bek-1S-k2U" secondAttribute="top" constant="19" id="wvq-yk-Yxz"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-ec-jbo">
@@ -250,13 +244,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="PRg-ec-jbo" firstAttribute="trailing" secondItem="Tk3-Ct-ymc" secondAttribute="trailing" id="3FN-hf-DKK"/>
+                            <constraint firstItem="Bek-1S-k2U" firstAttribute="top" secondItem="PRg-ec-jbo" secondAttribute="bottom" constant="8" id="7VX-V1-xhM"/>
                             <constraint firstItem="Bek-1S-k2U" firstAttribute="top" secondItem="PRg-ec-jbo" secondAttribute="bottom" constant="8" id="AsU-p7-yHj"/>
                             <constraint firstItem="PRg-ec-jbo" firstAttribute="leading" secondItem="Tk3-Ct-ymc" secondAttribute="leading" id="MRm-4l-jbL"/>
+                            <constraint firstItem="PRg-ec-jbo" firstAttribute="top" secondItem="Tk3-Ct-ymc" secondAttribute="top" id="ReP-MC-fPh"/>
                             <constraint firstItem="PRg-ec-jbo" firstAttribute="trailing" secondItem="Tk3-Ct-ymc" secondAttribute="trailing" id="T34-t4-Prb"/>
                             <constraint firstItem="Tk3-Ct-ymc" firstAttribute="trailing" secondItem="Bek-1S-k2U" secondAttribute="trailing" id="Ugd-8B-Fic"/>
                             <constraint firstItem="Tk3-Ct-ymc" firstAttribute="bottom" secondItem="Bek-1S-k2U" secondAttribute="bottom" id="e1j-LN-dEp"/>
                             <constraint firstItem="Bek-1S-k2U" firstAttribute="leading" secondItem="Tk3-Ct-ymc" secondAttribute="leading" id="e1v-VM-kVp"/>
                             <constraint firstItem="Bek-1S-k2U" firstAttribute="top" secondItem="Tk3-Ct-ymc" secondAttribute="top" constant="543" id="r2U-Gq-Cg8"/>
+                            <constraint firstItem="PRg-ec-jbo" firstAttribute="leading" secondItem="Tk3-Ct-ymc" secondAttribute="leading" id="tar-Xk-l4L"/>
                             <constraint firstItem="PRg-ec-jbo" firstAttribute="top" secondItem="Tk3-Ct-ymc" secondAttribute="top" id="vQ2-pF-FvH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tk3-Ct-ymc"/>
@@ -270,8 +268,10 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="heightConstraint" destination="Mh7-Ev-YNz" id="9ef-SG-DCZ"/>
+                        <outlet property="messageTable" destination="PRg-ec-jbo" id="kcc-fF-Xpy"/>
+                        <outlet property="messageTextField" destination="drZ-qb-DGD" id="vtW-J2-yYP"/>
                         <outlet property="sendOutlet" destination="jDA-hi-hww" id="tdb-7J-r6m"/>
-                        <outlet property="textViewOutlet" destination="Yfj-0e-cuG" id="50n-Q0-WZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0e-np-S1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
